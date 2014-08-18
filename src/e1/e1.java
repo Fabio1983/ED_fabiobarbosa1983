@@ -18,7 +18,7 @@ import java.util.Scanner;
       private int nElems;
       private String nomeBusca;
       
- public EstruturaAvancada(String palavra){
+ public EstruturaAvancada(){
     a = new String[5];
     nElems = 0;
 }
