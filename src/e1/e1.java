@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package fabiobarbosa;
+package e1;
 
 import java.util.Scanner;
 
@@ -18,8 +18,7 @@ import java.util.Scanner;
       private int nElems;
       private String nomeBusca;
       
- public EstruturaAvancada(String[5]){
-
+ public EstruturaAvancada(String palavra){
     a = new String[5];
     nElems = 0;
 }
