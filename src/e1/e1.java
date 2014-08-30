@@ -7,6 +7,7 @@
 package e1;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,14 +28,16 @@ import java.util.Scanner;
 //------------------------------------------------
 public boolean busca(String nomeBusca){
     
-    nElems = 5;
+    nomeBusca = JOptionPane.showInputDialog("Digite nome que você quer buscar");
+    
+    
     int j;
     for(j=0;j<nElems;j++)
         if(nomeBusca.charAt(0) == a[j].charAt(0))
             break;
     if(j == nElems)
          return false;
-            else
+    else
          return true;
 }
 //------------------------------------------------
