@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package exercicio2;
+package e2;
 
 /**
  *
