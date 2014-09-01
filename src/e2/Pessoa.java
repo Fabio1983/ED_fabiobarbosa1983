@@ -20,9 +20,6 @@ public class Pessoa {
         this.idade = idade;
         this.profissao = profissao;
     }
-    public void Insert(String nome,int idade,String profissao){
-        
-    }
 
     
     
