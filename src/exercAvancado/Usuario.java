@@ -18,10 +18,13 @@ public class Usuario {
         Estrutura arr = new Estrutura(maxSize);
         Scanner entrada = new Scanner(System.in);
         Scanner entradaint = new Scanner(System.in);
+        Scanner entradaint2 = new Scanner(System.in);
         Scanner entradafloat = new Scanner(System.in);
         System.out.println("Bem vindo ao Programa de Vetores!!!!");
         
-        for(int i=1; i < 6; i++){
+        System.out.println("Digite quantos jogadores ");
+        int qnt = entradaint2.nextInt();
+        for(int i=1; i < qnt; i++){
             System.out.println("Digite o nome " + i);
             String nome = entrada.nextLine();
             System.out.println("Digite a idade de " + nome);
