@@ -21,6 +21,15 @@ public class Pessoa {
         this.profissao = profissao;
     }
     
+	public void displayPessoa()
+      {
+      System.out.print("   Nome: " + nome);
+      System.out.print(", Profissao: " + profissao);
+      System.out.println(", Idade: " + idade);
+      }
+	
+	public String getNome()
+      { return nome; }
     
     
 }
