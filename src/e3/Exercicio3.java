@@ -10,6 +10,6 @@ package e3;
  *
  * @author Fabio
  */
-public class e3 {
+public class Exercicio3 {
     
 }
