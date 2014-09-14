@@ -14,8 +14,8 @@ import java.util.Scanner;
  */
 public class Usuario {
     public static void main(String[] args){
-        int maxSize = 100;
-        Estrutura arr = new Estrutura(maxSize);
+        int maxSize = 100;//variável que será o max da class
+        Estrutura arr = new Estrutura(maxSize);//método construtor exige um parâmetro int max
         Scanner entrada = new Scanner(System.in);
         Scanner entradaint = new Scanner(System.in);
         Scanner entradaint2 = new Scanner(System.in);

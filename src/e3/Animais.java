@@ -11,9 +11,28 @@ package e3;
  * @author Fabio
  */
 public class Animais {
+    private String nome;
     private String cor;
     private float tamanho;
     
     
+    public Animais(String nome,String cor,float tamanho){
+        this.nome = nome;
+        this.cor = cor;
+        this.tamanho = tamanho;
+    }
     
+    public String getCor(){
+        return cor;
+    }
+    
+    public float getTamanho(){
+        return tamanho;
+    }
+        
+    public void displayAnimais(){
+        System.out.println(" nome: " + this.nome);
+        System.out.println(" cor: " + this.cor);
+        System.out.println(" tamanho: " + this.tamanho);
+    }
 }
