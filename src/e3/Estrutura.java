@@ -15,9 +15,9 @@ public class Estrutura {
     private Animais[] a;
     private long[] an;
     
-    public Estrutura(){
+    public Estrutura(int max){
         an = new long[50];
-        a = new Animais[50];
+        a = new Animais[max];
         nElems = 0;        
     }
     
@@ -84,7 +84,7 @@ public class Estrutura {
     //--------------------------------------------------
     //------- Visualização de Animais
     //--------------------------------------------------
-    public void display(String nome, String cor, float tamanho){
+    public void display(){
         for(int i=0;i<nElems;i++)
             a[i].displayAnimais();
     }

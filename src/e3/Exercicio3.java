@@ -15,15 +15,19 @@ import javax.swing.JOptionPane;
 public class Exercicio3 {
     
     public static void main(String[] args){
-        Estrutura a = new Estrutura();
+        int maxSize = 50;
+        Estrutura a = new Estrutura(maxSize);
+        String nome = null;
+        String cor = null;
+        float tamanho = 0;
         //-----------------------------
         //cadastra animais
         //-----------------------------
         int resposta = JOptionPane.showConfirmDialog(null, "Deseja cadastrar algum animal??");
         if(resposta == 0){
-            String nome = JOptionPane.showInputDialog("Digite nome do Animal");
-            String cor = JOptionPane.showInputDialog("Digite a cor do Animal");
-            float tamanho = Float.parseFloat(JOptionPane.showInputDialog("Digite o tamanho do Animal"));
+            nome = JOptionPane.showInputDialog("Digite nome do Animal");
+            cor = JOptionPane.showInputDialog("Digite a cor do Animal");
+            tamanho = Float.parseFloat(JOptionPane.showInputDialog("Digite o tamanho do Animal"));
             a.InsertionSort(nome,cor,tamanho);
         }
         if(resposta == 1){
@@ -37,7 +41,7 @@ public class Exercicio3 {
         //--------------------------
         int visualiza = JOptionPane.showConfirmDialog(null, "Deseja visualizar animais cadastrados??");
         if(visualiza == 0){
-            a.display(nome,cor,tamanho);
+            
         }
         if(visualiza == 1){
             JOptionPane.showMessageDialog(null, "Não deseja visualizar mais estou certo??");

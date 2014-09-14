@@ -31,8 +31,8 @@ public class Animais {
     }
         
     public void displayAnimais(){
-        System.out.println(" nome: " + this.nome);
-        System.out.println(" cor: " + this.cor);
-        System.out.println(" tamanho: " + this.tamanho);
+        System.out.println(" nome: " + nome);
+        System.out.println(" cor: " + cor);
+        System.out.println(" tamanho: " + tamanho);
     }
 }
