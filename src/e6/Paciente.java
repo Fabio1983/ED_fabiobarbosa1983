@@ -18,8 +18,12 @@ public class Paciente {
         this.nome = nome;
         this.prioridade = prioridade;
     }
-    public void Cadastro(String nome,String prioridade){
-        
+    public void Cadastro(String prioridade){
+        int i;
+        if(prioridade.equalsIgnoreCase("Alta")){
+           
+            
+        }
     }
     
     
