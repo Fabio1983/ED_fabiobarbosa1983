@@ -91,7 +91,7 @@ public void insere(String nome){
     return retorno;   
    }
 }
-public class ex1 {
+public class e1 {
     public static void main(String[] args)
           {
               int maxSize = 100;            // coloca em uma constante o tamanho do vetor
