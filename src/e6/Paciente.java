@@ -39,7 +39,6 @@ public class Paciente {
     }
 
     public void Cadastro(String nome, String prioridade){
-        int i;
         if(prioridade.equalsIgnoreCase("Alta")){
             if(nItems==0){
                 p[nItems++] = new Paciente(nome, prioridade);
