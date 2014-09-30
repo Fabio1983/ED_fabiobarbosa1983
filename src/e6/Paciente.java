@@ -21,7 +21,23 @@ public class Paciente {
         this.prioridade = prioridade;
         nItems = 0;
     }
-   
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPrioridade() {
+        return prioridade;
+    }
+
+    public void setPrioridade(String prioridade) {
+        this.prioridade = prioridade;
+    }
+
     public void Cadastro(String nome, String prioridade){
         int i;
         if(prioridade.equalsIgnoreCase("Alta")){
