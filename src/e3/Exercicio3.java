@@ -36,24 +36,24 @@ public class Exercicio3 {
         if(resposta == 2){
             JOptionPane.showMessageDialog(null, "Operação cancelada");
         }
-        System.out.println("Animais Cadastrados");
+        JOptionPane.showMessageDialog(null, "Animais Cadastrados");
         e.display();
         
-            System.out.println("Muito bem! Vamos fazer uma busca binária por cor?");
-              System.out.println("Digite o nome de uma cor que iremos imprimir o Animal: ");
+            JOptionPane.showMessageDialog(null, "Muito bem! Vamos fazer uma busca binária por cor?");
+            JOptionPane.showMessageDialog(null, "Digite o nome de uma cor que iremos imprimir o Animal: ");
               
               if (!e.buscaCor(cor))
-                    System.out.println("Nenhum Animal encontrado");
+                    JOptionPane.showMessageDialog(null, "Nenhum Animal encontrado");
 
-              System.out.println("Vamos buscar agora por tamanho? Mas antes vou ordenar por Tamanho!");
-              System.out.println("Ordenando ...");
+              JOptionPane.showMessageDialog(null, "Vamos buscar agora por tamanho? Mas antes vou ordenar por Tamanho!");
+             JOptionPane.showMessageDialog(null, "Ordenando ...");
               e.ordenaTamanho();
-              System.out.println("Pronto! Digite agora o tamanho que deseja: ");
+              JOptionPane.showMessageDialog(null, "Pronto! Digite agora o tamanho que deseja: ");
               
              if (!e.buscaTamanho(tamanho))
-                    System.out.println("Nenhum Animal encontrado");
+                    JOptionPane.showMessageDialog(null, "Nenhum Animal encontrado");
               
-              System.out.println("Muito bem! Para finalizar vou imprimir todos os Animais na nova ordem");
+              JOptionPane.showMessageDialog(null, "Muito bem! Para finalizar vou imprimir todos os Animais na nova ordem");
 
               e.display();
         
