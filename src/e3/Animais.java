@@ -21,7 +21,9 @@ public class Animais {
         this.cor = cor;
         this.tamanho = tamanho;
     }
-    
+    public String getNome(){
+        return nome;
+    }
     public String getCor(){
         return cor;
     }

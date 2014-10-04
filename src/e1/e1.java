@@ -109,7 +109,6 @@ public class e1 {
                   System.out.println("Não encontrado nenhum nome!!");
               
               System.out.println("Digite um nome para buscar:");
-              
               if (arr.busca(entrada.nextLine()))
                     System.out.println("Encontrei!!!");
               else

@@ -19,8 +19,8 @@ public class Exercicio2 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-       int maxSize = 100;            // coloca em uma constante o tamanho do vetor
-              Estrutura arr = new Estrutura(maxSize); // instancia a estrutura de dados
+       int max = 100;            // coloca em uma constante o tamanho do vetor
+              Estrutura arr = new Estrutura(max); // instancia a estrutura de dados
               Scanner entrada = new Scanner (System.in); //Instancio o objeto entrada do tipo Scanner
               Scanner entradaint = new Scanner (System.in);
               System.out.println("Bem Vindo ao Programa de Vetores!!!");

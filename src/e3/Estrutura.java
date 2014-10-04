@@ -13,73 +13,166 @@ package e3;
 public class Estrutura {
     private int nElems;
     private Animais[] a;
-    private long[] an;
     
     public Estrutura(int max){
-        an = new long[50];
         a = new Animais[max];
         nElems = 0;        
     }
-    
+    //--------------------------------------
+    //busca por nome
+    //--------------------------------------   
+    public int buscaNome(String searchkey)
+      {
+      int lowerBound = 0;
+      int upperBound = nElems-1;
+      int curIn;
+
+      while(true)
+         {
+         curIn = (lowerBound + upperBound ) / 2;
+         if(a[curIn].getNome().equals(searchkey))
+            return curIn;
+         else if(lowerBound > upperBound)
+            return nElems;
+         else
+            {
+            if(a[curIn].getNome().compareTo(searchkey) < 0)
+               lowerBound = curIn + 1;
+            else
+               upperBound = curIn - 1;
+            }  
+         }  
+      }
     //--------------------------------------------------
-    //------- Inserção ordenada
+    //------- Ordenação por tamanho (InsertSort)
     //--------------------------------------------------
-    public void InsertionSort(String nome,String cor,float tamanho){
+    public void ordenaTamanho(){
         int in, out;
         
         for(out=1;out<nElems;out++){
-         long temp = an[out];   
+         Animais temp = a[out];   
          in = out;
-         while(in>0 && an[in-1] >= temp){
-         an[in] = an[in-1];
+         while(in>0 && a[in-1].getTamanho() >= temp.getTamanho()){
+         a[in] = a[in-1];
          in--;
          }
-         an[in] = temp;
+         a[in] = temp;
         }
     }
     //--------------------------------------------------
     //------- Busca Binária por Cor
     //--------------------------------------------------
-    public String findCor(String searchkey){
+    public boolean buscaCor(String searchkey){
         int lowerBound = 0;
         int upperBound = nElems - 1;
         int curIn;
         
         while(true){
             curIn = (lowerBound + upperBound) / 2;
-            if(a[curIn].getCor().equalsIgnoreCase(searchkey))
-                return String.valueOf(curIn);
-            else if(lowerBound > upperBound)
-                return String.valueOf(nElems);
+            if(a[curIn].getCor().equalsIgnoreCase(searchkey)){
+                for (int i = curIn; (a[i].getCor().equalsIgnoreCase(searchkey)); i++) { 
+                 a[i].displayAnimais();
+                 System.out.println("==============================================");
+                 if (i == (nElems-1))
+                     break;
+                }
+            if (curIn ==0)
+                 return true;
+             
+             for (int j = curIn-1; (a[j].getCor().equals(searchkey)); j--) {
+                   a[j].displayAnimais();
+                 System.out.println("==============================================");
+                 if (j == 0)
+                     break;     
+             }   
+             return true;
+         }
+         else if(lowerBound > upperBound)
+            return false;
+         else                       
+            {
+            if(a[curIn].getCor().compareTo(searchkey) < 0) 
+               lowerBound = curIn + 1;
             else
-                if(a[curIn].getCor().equalsIgnoreCase(searchkey))
-                    lowerBound = curIn + 1;
-            else
-                    upperBound = curIn - 1;
+               upperBound = curIn - 1;
         }       
-    }
+}
     
     //--------------------------------------------------
     //------- Busca Binária por Tamanho
     //--------------------------------------------------
-    public String findTamanho(float searchkey){
+
+    public boolean buscaTamanho(double searchkey){
         int lowerBound = 0;
         int upperBound = nElems - 1;
         int curIn;
         
         while(true){
             curIn = (lowerBound + upperBound) / 2;
-            if(a[curIn].getTamanho() == searchkey)
-                return String.valueOf(curIn);
-            else if(lowerBound > upperBound)
-                return String.valueOf(nElems);
-            else
-                if(a[curIn].getTamanho() == searchkey)
-                    lowerBound = curIn + 1;
-            else
-                    upperBound = curIn - 1;
-        }       
+            if(a[curIn].getTamanho() == searchkey){
+                for (int i = curIn; (a[i].getTamanho() == searchkey); i++) { 
+                 a[i].displayAnimais();
+                 System.out.println("==============================================");
+                
+                 if (i == (nElems-1))
+                     break;
+             }
+            if (curIn ==0)
+                 return true;
+
+             for (int j = curIn-1; (a[j].getTamanho() == searchkey); j--) {
+                   a[j].displayAnimais();
+                 System.out.println("==============================================");
+                  
+                 if (j == 0)
+                     break;
+             }           
+         
+            return true;        
+        }
+         else if(lowerBound > upperBound)
+            return false;
+         else
+         {
+             if(a[curIn].getTamanho() < searchkey) //mudamos aqui para comparar nome
+               lowerBound = curIn + 1;
+             else
+               upperBound = curIn - 1;
+         }
     }
+}
+    
+    //--------------------------------------------------
+    //------- Inserção Ordenada por cor
+    //--------------------------------------------------
+    public void Insere(String nome, String cor, float tamanho){
+     int i;
+        for(i=0;i<nElems;i++)
+         if(a[i].getCor().compareTo(cor) > 0)
+             break;
+     for(int k=nElems; k>i; k--)
+         a[k] = a[k-1];
+        a[i] = new Animais(nome, cor, (float) tamanho);                  // insere o elemento na posição necessária
+      nElems++;
+    }
+    //--------------------------------------------------------------
+//Método de remoção por nome....
+//--------------------------------------------------------------
+  
+    public boolean remove(String value)
+      {
+      int j = buscaNome(value);           //Utiliza a busca binária para remover!!!
+      if(j==nElems)                  // caso não encontre, retorna false!
+         return false;
+      else                           // caso encontre...
+         {
+         for(int k=j; k<nElems; k++) // move os elementos uma posição pra tras
+            a[k] = a[k+1];
+         nElems--;                   // decrementa o tamanho
+         return true;
+         }
+      }
+   
     
     //--------------------------------------------------
     //------- Visualização de Animais
