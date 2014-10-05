@@ -134,7 +134,7 @@ public class Estrutura {
             return false;
          else
          {
-             if(a[curIn].getTamanho() < searchkey) //mudamos aqui para comparar nome
+             if(a[curIn].getTamanho() < searchkey)
                lowerBound = curIn + 1;
              else
                upperBound = curIn - 1;
@@ -145,14 +145,14 @@ public class Estrutura {
     //--------------------------------------------------
     //------- Inserção Ordenada por cor
     //--------------------------------------------------
-    public void Insere(String nome, String cor, float tamanho){
+    public void Insere(String nome, String cor, double tamanho){
      int i;
         for(i=0;i<nElems;i++)
          if(a[i].getCor().compareTo(cor) > 0)
              break;
      for(int k=nElems; k>i; k--)
          a[k] = a[k-1];
-        a[i] = new Animais(nome, cor, (float) tamanho);                  // insere o elemento na posição necessária
+        a[i] = new Animais(nome, cor, tamanho);                  // insere o elemento na posição necessária
       nElems++;
     }
     //--------------------------------------------------------------

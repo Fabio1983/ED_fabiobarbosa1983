@@ -13,10 +13,10 @@ package e3;
 public class Animais {
     private String nome;
     private String cor;
-    private float tamanho;
+    private double tamanho;
     
     
-    public Animais(String nome,String cor,float tamanho){
+    public Animais(String nome,String cor,double tamanho){
         this.nome = nome;
         this.cor = cor;
         this.tamanho = tamanho;
@@ -28,7 +28,7 @@ public class Animais {
         return cor;
     }
     
-    public float getTamanho(){
+    public double getTamanho(){
         return tamanho;
     }
         

@@ -19,7 +19,7 @@ public class Exercicio3 {
         Estrutura e = new Estrutura(maxSize);
         String nome = null;
         String cor = null;
-        float tamanho = 0;
+        double tamanho = 0;
         //-----------------------------
         //cadastra animais
         //-----------------------------
