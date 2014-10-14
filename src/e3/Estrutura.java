@@ -95,14 +95,16 @@ public class Estrutura {
                lowerBound = curIn + 1;
             else
                upperBound = curIn - 1;
-        }       
-}
+            }       
+        }
+        
+    }
     
     //--------------------------------------------------
     //------- Busca Binária por Tamanho
     //--------------------------------------------------
 
-    public boolean buscaTamanho(double searchkey){
+       public boolean buscaTamanho(double searchkey){
         int lowerBound = 0;
         int upperBound = nElems - 1;
         int curIn;
