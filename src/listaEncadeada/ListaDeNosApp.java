@@ -17,10 +17,10 @@ class ListaDeNosApp
       {
       ListaDeNos theList = new ListaDeNos();  // criamos uma nova lista
 
-      theList.insertFirst(22, 2.99);      // inserimos quatro itens nela
-      theList.insertFirst(44, 4.99);
-      theList.insertFirst(66, 6.99);
-      theList.insertFirst(88, 8.99);
+      theList.insertFirst("Joao", "Andrea");      // inserimos quatro itens nela
+      theList.insertFirst("Jose", "Ana");
+      theList.insertFirst("Aline", "Paulo");
+      theList.insertFirst("Carlos", "Carla");
 
       theList.displayList();              // mostramos a lista
 

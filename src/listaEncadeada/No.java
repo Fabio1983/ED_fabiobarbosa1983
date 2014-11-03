@@ -4,19 +4,19 @@ package listaEncadeada;
 
 class No
    {
-   private int iData;              // vai armazenar um valor numerico qualquer
-   private double dData;           // vai armazenar um valor numerico qualquer
+   private String nome;    
+   private String palavra; 
    private No next;              // referência para o próximo item da lista
 // -------------------------------------------------------------
-   public No(int id, double dd) // metodo construtor
+   public No(String n, String p) // metodo construtor
       {
-      iData = id;                 // inicializa os dois atributos do No
-      dData = dd;                 // o No next a principio fica como null
-      }                           // 
+      this.nome = n;                            // inicializa os dois atributos do No
+      this.palavra = p;                         // o No next a principio fica como null
+      }                 
 // -------------------------------------------------------------
    public void displayNo()      // mostra os valores do proprio nó
       {
-      System.out.print("{" + iData + ", " + dData + "} ");
+      System.out.print("{" + nome + ", " + palavra + "} ");
       }
    
    public void setNext(No n){
