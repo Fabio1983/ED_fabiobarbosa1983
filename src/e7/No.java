@@ -1,5 +1,5 @@
 
-package listaEncadeada;
+package e7;
 
 
 class No
